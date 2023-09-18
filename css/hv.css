@@ -558,44 +558,75 @@ a {
     }
 }
 /*end animaux */
-/*start videos */
-.videos {
+/*start jeux */
+.jeux {
     background-color: var(--alt-color);
-    padding-bottom: 40px;
+    padding-bottom: 140px;
 }
-.videos .content {
+.jeux .container {
+    position: relative;
+}
+.jeux .content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
 }
-.videos .content .box {
+.jeux .content img {
     width: 100%;
+    height: 300px;
     max-width: 100%;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    background-color: white;
 }
-.videos .content .box img {
-    height: 300px;
-    width: 100%;
-}
-.videos .content .box h3 {
-    color: var(--main-color);
-    padding: 20px;
+.jeux .reservation {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
 }
 @media (max-width: 1024px) {
-    .videos .content {
+    .jeux .content {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 700px) {
-    .videos .content {
+    .jeux .content {
         grid-template-columns: 1fr;
     }
 }
-/*end videos */
+/*end jeux */
+/*start propos */
+.propos {
+padding-bottom: 60px;
+}
+.propos p {
+    font-size: large;
+    line-height: 1.5;
+}
+.propos .content {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+@media (max-width: 768px) {
+    .propos .content {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .propos img {
+        height: 400px;
+    }
+}
+.propos img {
+    height: 225px;
+}
+/*end propos */
 /*start chifres */
+.chifres {
+    background-color: var(--alt-color);
+    padding-bottom: 100px;
+}
 .chifres .content {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -654,10 +685,12 @@ a {
 }
 .footer .container {
     padding: 80px auto;
+    padding-bottom: 30px;
 }
 .footer .content {
     display: flex;
     flex-wrap: wrap;
+    padding-bottom: 20px;
 }
 .footer .content .first {
     padding-right: 20px;
@@ -706,8 +739,15 @@ a {
         text-align: center;
     }
 }
+.footer .fin {
+    text-align: center;
+    color: var(--alt-color);
+    margin-bottom: 40px;
+}
+.footer span {
+    color: green;
+}
 /*end footer */
-
 
 
 
